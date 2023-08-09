@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+:root {
+    --skyblue:#2BD7F2;
+    --barbiepink:#e94196;
+    --mintgreen:#3EB489;
+    --lavendersoft:#E6E6FA;
+    --lavenderhard:#9873AC;
+    --white:#ffff;
+}
+*::selection{
+    background:var(--skyblue);
+    color: var(--barbiepink);
+}
+html::-webkit-scrollbar{
+    width:0.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--skyblue);
+}
+/* for scroll smooth  */
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar section start  */
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.mk-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--barbiepink);
+    padding: 1rem;  /*1.5rem*/
+}
+.nav-logo{
+    text-decoration: none;
+}
+.nav-logo h1{
+    color: #fff;
+}
+.nav-logo span{
+    color: var(--yellow);
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+.mk-nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mk-nav-item{
+    list-style: none;
+    margin-left: 3rem;
+}
+
+.mk-nav-link{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.mk-nav-link:hover{
+    color: var(--skyblue);
+    border-bottom: 1px solid var(--skyblue);
+}
+
+.nav-logo{
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+}
+
+/* navbar section end  */
+
+/* home section  */
+.vlog-home-row{
+   padding-top: 60px;
+}
+.vlog-greet{
+    font-size: 25px;
+}
+.vlog-name{
+    font-size: 35px;
+}
+.vlog-name span{
+    color: var(--barbiepink);
+    font-size: 60px;
+}
+.vlog-one{
+    padding-left: 30px;
+}
+.vlog-two{
+    padding-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* scrolling top section  */
+.arrow{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 80vh;
+    color: var(--white);
+    background-color: var(--barbiepink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    position: fixed;
+    bottom: 50px;
+    right: 2rem;
+    z-index: 100;
+    /* display: none; */
+}
+.arrow:hover{
+    background-color: var(--skyblue);
+    color: var(--barbiepink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for responsive nav bar  */
+@media only screen and (max-width: 668px){
+    .mk-nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 0.5rem;
+        flex-direction: column;
+        background-color: var(--barbiepink);
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+
+    .mk-nav-menu.active{
+        left: 0;
+    }
+
+    .mk-nav-item{
+        margin: 2.5rem 0;
+
+    }
+    .mk-nav-link{
+        color: #fff;
+    }
+    .mk-nav-link:hover{
+        color: var(--skyblue);
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .bar{
+        background-color: var(--white);
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+   .vlog-home-col{
+    padding: 10px;
+   }
+   .vlog-two{
+    margin-top: 40px;
+   }
+}
